@@ -1,9 +1,0 @@
-today computer are posses distributed computing and are heterogeneous (multiple os)
-
-networking can be achieved using sockets end to end.  java.net
-rmi : it treats distributed hosts as a single host.   java.rmi
-
-the ports are from 1 to 65,553
-1 to 1023 are reserved form administrative purpose(e.g. 21 for FTP, 23 for Telnet, 25 for e-mail, and 80 for HTTP).
-
-
