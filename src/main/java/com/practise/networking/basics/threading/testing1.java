@@ -1,7 +1,6 @@
 package com.practise.networking.basics.threading;
 public class testing1 extends Thread
 {
-    // Remember constructor cannot have a return type.
     public testing1(String threadName)
     {
         this.setName(threadName);

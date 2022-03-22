@@ -1,26 +1,4 @@
-/*
 
-<<Multiple programs are stacked in here.
-So this program might seem lengthy,
-So please read the entire program.>>
-
-    note:   FileInputStream == 1 Byte [used to read file byte by byte]
-            DataInputStream == 8 Bytes [used to read java primitives like int, float, double...]
-
-            InputStreamReader == [ used to read characters from InputStream of bytes]
-            BufferedInputStream == [used to buffer the bytes]
-
-            BufferedReader    ==  [used to buffer the characters not bytes]
-            FileReader        == [reads Characters instead of bytes. each character may be > 1 Byte]
-
-PrintWriter : takes both streams and files as its input. as it acts as both streams and readers.
-
-   conclusion:  streams         : read bytes of data.
-                reader          : read characters of data.
-                streamReader    : its the mix, it takes streams as argument and reads characters.
-                objectReader    : reads objects.
-
-*/
 package com.practise.networking.basics.threading;
 
 import java.io.*;
@@ -48,10 +26,10 @@ public class Streams
             OUTPUTSTREAM.flush();
             OUTPUTSTREAM.close();
 
-            int c = INPUTSTREAM.read();  // it reads 1 Byte at a time. hence returns int
+            int c = INPUTSTREAM.read();  
             while(c != -1)
             {
-                print += (char)c; //String.valueOf(c);
+                print += (char)c; 
                 c = INPUTSTREAM.read();
             }
             INPUTSTREAM.close();
@@ -64,8 +42,6 @@ public class Streams
 
     private static void dataStreams()
     {
-        // datastreams is used to read multiple bytes upto 8 bytes(Double), using FileInputStream
-        // note: file gets create beyond 2 parent folder
         File FILE = new File("data_streams.txt");
         try
         {
@@ -91,7 +67,7 @@ public class Streams
     }
 
     private static void characterStream()
-    { // when you wish to r/w characters to a file then use I/O-stream-R/W
+    { 
         File FILE = new File("character_stream.txt");
         try
         {
@@ -154,12 +130,9 @@ public class Streams
 
     private static void printStream()
     {
-        // its similar to BufferReader, except that it doesn't use buffering
-        // both printStream and printWriter is used to write any type of data like int, text, float etc
         try
         {
             PrintStream out = new PrintStream("buffered_reader.txt");
-            // PrintWriter out = new PrintWriter(new FileWriter(FILE));
             out.println("buffered writer and printStream happened....");
             System.out.println("file has been updated...");
         }

@@ -7,9 +7,3 @@ the ports are from 1 to 65,553
 1 to 1023 are reserved form administrative purpose(e.g. 21 for FTP, 23 for Telnet, 25 for e-mail, and 80 for HTTP).
 
 
-
-java Casing Convention:
-    all classes will be written in Title case.
-    all methods will be written in Camel case.
-    all interfaces(scanner, writers, streams, constants, enum) will be written in UPPERCASE.
-    all regular variables will be written in lowercase and also can use numbers and underscores.
